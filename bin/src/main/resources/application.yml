@@ -1,0 +1,9 @@
+mqtt:
+  host: tcp://127.0.0.1:1883
+  userName: admin1
+  passWord: 1234567
+  qos: 1
+  clientId: serve
+  timeout: 10
+  keepalive: 20                               }
+

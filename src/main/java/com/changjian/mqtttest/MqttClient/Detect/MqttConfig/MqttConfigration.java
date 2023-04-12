@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
  * Create By Spring-2022/10/29
  */
 @Configuration
-@ConfigurationProperties(prefix = "com.mqtt")
+@ConfigurationProperties(prefix = "mqtt")
 public class MqttConfigration {
     private String url;
     private String clientId;

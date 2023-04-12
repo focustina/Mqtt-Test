@@ -31,7 +31,7 @@ public class DetectionResult {
         this.scenes_id = scenes_id;
     }
 
-    public String getScene_version(String s) {
+    public String getScene_version() {
         return scene_version;
     }
 
@@ -39,7 +39,7 @@ public class DetectionResult {
         this.scene_version = scene_version;
     }
 
-    public String getArea_id(String s) {
+    public String getArea_id() {
         return area_id;
     }
 

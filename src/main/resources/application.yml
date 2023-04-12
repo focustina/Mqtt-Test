@@ -1,9 +1,21 @@
 mqtt:
-  host: tcp://127.0.0.1:1883
-  userName: admin1
-  passWord: 1234567
-  qos: 1
+  host: tcp://192.168.100.213:1883
+  userName: admin
+  passWord: public
+  qos: 0
   clientId: serve
   timeout: 10
-  keepalive: 20                               }
+  keepalive: 20
+  sendTopics :
+
+
+
+# Database Config
+spring:
+  datasource:
+    username: dbmgus
+    password: 3#w6xDc2c
+    url: jdbc:mysql://172.16.8.208:3306/mqttserver?userUnicode=true&characterEncoding=utf-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
 

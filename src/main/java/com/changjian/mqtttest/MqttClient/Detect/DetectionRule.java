@@ -13,6 +13,10 @@ public class DetectionRule {
         this.detection_value = detection_value;
     }
 
+    public String getDetection_item() {
+        return detection_item;
+    }
+
     public void setDetection_item(String detection_item) {
         this.detection_item = detection_item;
     }

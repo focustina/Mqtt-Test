@@ -11,7 +11,7 @@ import java.util.*;
 
 public class Simulator {
     private static final String BROKER_URL = "tcp://192.168.100.213:1883";
-    private static final String TOPIC = "edgex/rule002-1";
+    private static final String TOPIC = "edgex/rule/device/onvif-camera/ruleSource/9e34aebb-0446-4d13-a91f-2ff2871d504b";
     private static final String USERNAME = "admin";
     private static final String PASSWORD = "public";
 
@@ -34,25 +34,25 @@ public class Simulator {
                 String t = RandomUtil.randomNumbers(10);
                 DetectionResult detectionResult = new DetectionResult();
                 List<DetectionRule> list = new ArrayList<DetectionRule>();
-//                DetectionRule detectionRule1 = new DetectionRule("detection-item-1","point-1-detection-item-1","device_lamp_red",2);
-//                DetectionRule detectionRule2 = new DetectionRule("detection-item-2","point-1-detection-item-1","device_lamp_yellow",2);
-//                DetectionRule detectionRule3 = new DetectionRule("detection-item-3","point-1-detection-item-2","personnel",2);
-//                DetectionRule detectionRule4 = new DetectionRule("detection-item-4","point-1-detection-item-3","kettle",2);
-//                DetectionRule detectionRule5 = new DetectionRule("detection-item-4","point-1-detection-item-2","device_lamp",2);
-//                detectionResult.setId(UUID.randomUUID().toString());
-//                detectionResult.setScenes_id("9e34aebb-0446-4d13-a91f-2ff2871d504b");
-//                detectionResult.setArea_id("9e27aebb-0446-4d13-a91f-2ff2871d504b");
-//                detectionResult.setScene_version("v1.0.3");
-//                detectionResult.setPoint_id("1");
-//                detectionResult.setImage_id(t);
-//                detectionResult.setDetection_tag(UUID.randomUUID().toString());
-//                detectionResult.setDetection_no((int)(Math.random()*10+1));
-//                detectionResult.setEvent_time(time);
-//                list.add(detectionRule1);
-//                list.add(detectionRule2);
-//                list.add(detectionRule3);
-//                list.add(detectionRule4);
-//                detectionResult.setDetection_rule(list);
+                DetectionRule detectionRule1 = new DetectionRule("detection-item-1","point-1-detection-item-1","device_lamp_red",2);
+                DetectionRule detectionRule2 = new DetectionRule("detection-item-2","point-1-detection-item-1","device_lamp_yellow",2);
+                DetectionRule detectionRule3 = new DetectionRule("detection-item-3","point-1-detection-item-2","personnel",2);
+                DetectionRule detectionRule4 = new DetectionRule("detection-item-4","point-1-detection-item-3","kettle",2);
+                DetectionRule detectionRule5 = new DetectionRule("detection-item-4","point-1-detection-item-2","device_lamp",2);
+                detectionResult.setId(UUID.randomUUID().toString());
+                detectionResult.setScenes_id("9e34aebb-0446-4d13-a91f-2ff2871d504b");
+                detectionResult.setArea_id("9e27aebb-0446-4d13-a91f-2ff2871d504b");
+                detectionResult.setScene_version("v1.0.3");
+                detectionResult.setPoint_id("1");
+                detectionResult.setImage_id(t);
+                detectionResult.setDetection_tag(UUID.randomUUID().toString());
+                detectionResult.setDetection_no((int)(Math.random()*10+1));
+                detectionResult.setEvent_time(time);
+                list.add(detectionRule1);
+                list.add(detectionRule2);
+                list.add(detectionRule3);
+                list.add(detectionRule4);
+                detectionResult.setDetection_rule(list);
 
 
                 Gson gson = new Gson();

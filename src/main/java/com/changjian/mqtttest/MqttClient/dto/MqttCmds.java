@@ -1,10 +1,13 @@
 package com.changjian.mqtttest.MqttClient.dto;
 
 
+import cn.hutool.json.JSONUtil;
+import lombok.extern.slf4j.Slf4j;
+
 /**
  * Create By Spring-2022/11/3
  */
-
+@Slf4j
 public class MqttCmds {
 
     public MqttCmds(String cmdName, String cmdValue) {
@@ -38,5 +41,12 @@ public class MqttCmds {
                 ", cmdValue='" + cmdValue + '\'' +
                 '}';
     }
-}
+
+
+
+    }
+
+
+
+
 

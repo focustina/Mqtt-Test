@@ -1,12 +1,14 @@
-mqtt:
-  host: tcp://192.168.100.213:1883
-  userName: admin
-  passWord: public
-  qos: 0
-  clientId: serve
-  timeout: 10
-  keepalive: 20
-  sendTopics :
+com:
+  mqtt:
+    host: tcp://192.168.100.213:1883
+    userName: admin
+    passWord: public
+    qos: 0
+    clientId: serve
+    timeout: 10
+    keepalive: 20
+    sendTopics:
+
 
 
 
@@ -19,3 +21,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
 
 
+  select newuuid() as id, scenes_id, scene_version, area_id,
+  detection_tag, case when  sum(warn) = 3  then 1 else 0 end as warn, collect(warn) as warn_row, firstWarnIndex(collect(warn)) as warn_index, 
+  collect(image_id)[firstWarnIndex(collect(warn))] as image_id, collect(image_id) as image_collect, 
+  min(event_time) as event_time  from stream_1648882011190956034_ruleHandle group by scenes_id, scene_version, area_id, detection_tag,  TUMBLINGWINDOW(ms, 1600)
